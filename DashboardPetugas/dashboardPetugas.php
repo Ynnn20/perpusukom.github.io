@@ -18,18 +18,25 @@ if(!isset($_SESSION["signIn"]) ) {
      <title>Petugas Dashboard</title>
      <style>
     body {
-      /* Gunakan URL gambar sebagai latar belakang */
-      background-image: url('../assets/download.jfif');
-      background-repeat: no-repeat;
-      background-size: cover;
-      /* Atau sesuaikan properti lain sesuai kebutuhan Anda */
-    }
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      footer {
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
   </style>
   </head>
   <body>
     
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
-      <div class="container-fluid p-3">
+      <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">
           <img src="../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
         </a>

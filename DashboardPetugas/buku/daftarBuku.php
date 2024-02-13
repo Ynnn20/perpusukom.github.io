@@ -20,6 +20,20 @@ if(isset($_POST["search"]) ) {
      <title>Kelola buku || Petugas</title>
   </head>
   <style>
+    body {
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      footer {
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
     .layout-card-custom {
       display: flex;
       flex-wrap: wrap;

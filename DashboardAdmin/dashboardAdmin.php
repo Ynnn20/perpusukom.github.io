@@ -18,7 +18,14 @@ if(!isset($_SESSION["signIn"]) ) {
      <title>Admin Dashboard</title>
      <style>
       body {
-        background-image: url('../assets/download.jfif');
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      footer {
+        background: linear-gradient(to bottom, #198754, #198754);
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0;
@@ -66,7 +73,7 @@ if(!isset($_SESSION["signIn"]) ) {
   <body>
     
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
-      <div class="container-fluid p-2">
+      <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">
           <img src="../assets/bukulogo-removebg-preview.png" alt="logo" width="80px" style="border-radius: 8px; box-shadow: 0 25px 10px rgba(0, 0, 0, 0.1);">
         </a>

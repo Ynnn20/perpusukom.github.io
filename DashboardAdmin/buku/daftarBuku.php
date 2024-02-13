@@ -21,12 +21,19 @@ if(isset($_POST["search"]) ) {
   </head>
   <style>
         body {
-            background-image: url('../../assets/download.jfif'); /* Replace with the path to your background image */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: white; /* Set text color to contrast with the background */
-        }
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      footer {
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
 
         .navbar,
         .footer,

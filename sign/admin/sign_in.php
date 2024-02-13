@@ -20,7 +20,7 @@ if(isset($_POST["signIn"]) ) {
     $_SESSION["signIn"] = true;
     $_SESSION["admin"]["nama_admin"] = $nama;
     header("Location: ../../DashboardAdmin/dashboardAdmin.php");
-      exit;
+    exit;
   }
   $error = true;
   
@@ -29,92 +29,67 @@ if(isset($_POST["signIn"]) ) {
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
-     <title>Sign In || Admin</title>
-     <style>
-      body {
-      background: linear-gradient(to right, #0000cc, #00cc00);
-      margin: 0;
-      height: 100vh;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In || Admin</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #198754, #198754);
       display: flex;
-      align-items: center;
       justify-content: center;
-      color: #fff;
-      opacity: 0; /* Mengatur opasitas awal ke 0 */
-      animation: fadeIn 1s ease-in-out forwards; /* Animasi dengan nama 'fadeIn', durasi 2 detik, dan easing in-out */
+      align-items: center;
+      height: 100vh;
     }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0; /* Mulai dengan opasitas 0 */
-      }
-      to {
-        opacity: 1; /* Selesai dengan opasitas 1 */
-      }
+    .card {
+      width: 400px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
     }
-    </style>
-    </head>
-  <body>
-  <div class="container">
-    <div class="card p-2 mt-5">
-      <div class="position-absolute top-0 start-50 translate-middle">
-        <img src="../../assets/adminLogo.png" class="" alt="adminLogo" width="85px">
+    .card img {
+      width: 85px;
+      display: block;
+      margin: 0 auto;
+    }
+    .card h1 {
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+    }
+    .card form .input-group {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="../../assets/adminLogo.png" alt="adminLogo">
+    <h1>Sign In - Admin</h1>
+    <hr>
+    <form action="" method="post">
+      <div class="input-group" style="margin-top: 20px;">
+        <span class="input-group-text"><i class="fas fa-user"></i></span>
+        <input type="text" class="form-control" name="nama_admin" placeholder="Nama Lengkap" required>
       </div>
-      <h1 class="pt-5 text-center fw-bold">Sign In - Admin</h1>
-      <hr>
-    <form action="" method="post" class="row g-3 p-4 needs-validation" novalidate>
-    <label for="validationCustom01" class="form-label">Nama Lengkap</label>
-  <div class="input-group mt-0">
-    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
-    <input type="text" class="form-control" name="nama_admin" id="validationCustom01" required>
-    <div class="invalid-feedback">
-        Masukkan Nama anda!
-    </div>
+      <div class="input-group" style="margin-top: 20px;"> <!-- Tambahkan margin-top di sini -->
+        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+        <input type="password" class="form-control" name="password" placeholder="Password" required>
+      </div>
+      <div style="margin-top: 30px;"> <!-- Tambahkan margin-top di sini -->
+        <a href="../../index.php" class="btn btn-danger">Batal</a>
+        <button class="btn btn-primary" type="submit" name="signIn">Sign In</button>
+      </div>
+    </form>
+    <?php if(isset($error)) : ?>
+      <div class="alert alert-danger mt-3" role="alert">Nama atau Password Salah!</div>
+    <?php endif; ?>
   </div>
-  <label for="validationCustom02" class="form-label">Password</label>
-  <div class="input-group mt-0">
-    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
-    <input type="password" class="form-control" id="validationCustom02" name="password" required>
-    <div class="invalid-feedback">
-        Masukkan Password anda!
-    </div>
-  </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit" name="signIn">Sign In</button>
-    <a class="btn btn-danger" href="../../index.php">Batal</a>
-  </div>
-</form>
-</div>
-<?php if(isset($error)) : ?>
-    <div class="alert alert-danger mt-2" role="alert">Nama atau Password Salah!</div>
-<?php endif; ?>
-  </div>
-  
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
 </html>

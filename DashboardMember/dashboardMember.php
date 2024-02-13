@@ -17,7 +17,14 @@ if(!isset($_SESSION["signIn"]) ) {
      <title>Member Dashboard</title>
      <style>
     body {
-        background-image: url('../assets/download.jfif');
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      footer {
+        background: linear-gradient(to bottom, #198754, #198754);
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0;
@@ -70,7 +77,7 @@ if(!isset($_SESSION["signIn"]) ) {
 </style>
   <body>
      <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
-      <div class="container-fluid p-3">
+      <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">
           <img src="../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
         </a>
@@ -111,12 +118,12 @@ if(!isset($_SESSION["signIn"]) ) {
       $year = date('Y');
       ?>
       
-      <h1 class="mt-5 fw-bold" style="color: white;">Dashboard - <span class="fs-4 text-white"> <?php echo $day. " ". $dayOfMonth." ". " ". $month. " ". $year; ?> </span></h1>
+      <h1 class="mt-5 fw-bold" >Dashboard - <span class="fs-4"> <?php echo $day. " ". $dayOfMonth." ". " ". $month. " ". $year; ?> </span></h1>
       <div class="alert alert-success" role="alert">Selamat datang Siswa - <span class="text-capitalize fw-bold"><?php echo $_SESSION['member']['nama']; ?> </span> di Dashboard Perpus</div>
       
     <div class="mt-3 p-3">
       <div class="mt-2 mb-4">
-       <h3 class="mb-3" style="color: white;">Layanan Perpustakaan yang tersedia</h3>
+       <h3 class="mb-3">Layanan Perpustakaan yang tersedia</h3>
       </div>
         <div class="d-flex flex-wrap justify-content-center gap-2">
         <div class="cardImg">

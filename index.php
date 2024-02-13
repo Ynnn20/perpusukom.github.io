@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Get started</title>
+    <title>Login</title>
 
     <!-- Add this in the <head> section -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
     body {
-        background: linear-gradient(to bottom, #003366, #00cc00);
+        background: linear-gradient(to bottom, #198754, #198754);
         margin: 0;
         height: 100vh;
         display: flex;
@@ -44,24 +44,22 @@
   <body>
   <div class="container p-5">
     <div class="d-flex justify-content-center">
-      <div class="card" style="width: 20rem;">
+      <div class="card" style="width: 25rem;">
         <img src="https://i.pinimg.com/736x/19/02/8f/19028f0053fa0cb690585da89be32d73.jpg" class="card-img-top" alt="logo">
+        <h1 class="card-text text-center" style="color: green;">AKSES LOGIN PERPUSTAKAAN</h1>
         <!--<hr>
         <div class="card-body pt-2">
         <h3 class="card-text text-center">Portal Login Perpustakaan</h3>
         <p class="card-text text-center">Silahkan pilih halaman login sesuai dengan status Anda</p>
       </div>-->
-        <hr>
       <div class="card-body pt-2">
-        <h4 class="card-text text-center">Akses Login</h4>
         <p class="card-text text-center">Silahkan pilih halaman login sesuai dengan status Anda</p>
         <hr>
         <div class="row gap-2 p-2">
-          <a class="btn btn-primary mb-2" href="sign/admin/sign_in.php">Admin</a>
-          <a class="btn btn-warning mb-2" href="sign/petugas/sign_in.php">Petugas</a>
+          <a class="btn btn-success mb-2" href="sign/admin/sign_in.php">Admin</a>
+          <a class="btn btn-success mb-2" href="sign/petugas/sign_in.php">Petugas</a>
           <a class="btn btn-success mb-3" href="sign/member/sign_in.php">Siswa</a>
-          <hr>
-          <a class="btn btn-danger" href="index.php">Kembali</a>
+          <!--<a class="btn btn-danger" href="index.php">Kembali</a>-->
         </div>
       </div>
       </div>

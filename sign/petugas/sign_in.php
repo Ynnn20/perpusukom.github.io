@@ -36,30 +36,44 @@ if(isset($_POST["signIn"]) ) {
      <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
      <title>Sign In || Petugas</title>
      <style>
-      body {
-      background: linear-gradient(to right, #0000cc, #00cc00);
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      opacity: 0; /* Mengatur opasitas awal ke 0 */
-      animation: fadeIn 1s ease-in-out forwards; /* Animasi dengan nama 'fadeIn', durasi 2 detik, dan easing in-out */
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0; /* Mulai dengan opasitas 0 */
-      }
-      to {
-        opacity: 1; /* Selesai dengan opasitas 1 */
-      }
-    }
+        body {
+            background: linear-gradient(to right, #198754, #198754);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+        .card {
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .card img {
+            width: 85px;
+            display: block;
+            margin: 0 auto;
+        }
+        .card h1 {
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+        .card form .input-group {
+            margin-bottom: 20px;
+        }
+        .center-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
     </style>
     </head>
   <body>
-  <div class="container">
+  <div class="container center-form">
     <div class="card p-2 mt-5">
       <div class="position-absolute top-0 start-50 translate-middle">
         <img src="../../assets/adminLogo.png" class="" alt="petugasLogo" width="85px">
@@ -84,8 +98,8 @@ if(isset($_POST["signIn"]) ) {
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit" name="signIn">Sign In</button>
     <a class="btn btn-danger" href="../../index.php">Batal</a>
+    <button class="btn btn-primary" type="submit" name="signIn">Sign In</button>
   </div>
 </form>
 </div>

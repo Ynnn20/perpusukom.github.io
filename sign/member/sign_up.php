@@ -26,22 +26,11 @@ if(isset($_POST["signUp"]) ) {
      <title>Sign Up || Member</title>
      <style>
       body {
-      background: linear-gradient(to right, #0000cc, #00cc00);
+      background: linear-gradient(to right, #198754, #198754);
       margin: 0;
-      height: 100vh;
+      height: 60vh;
       display: flex;
       color: #fff;
-      opacity: 0; /* Mengatur opasitas awal ke 0 */
-      animation: fadeIn 1s ease-in-out forwards; /* Animasi dengan nama 'fadeIn', durasi 2 detik, dan easing in-out */
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0; /* Mulai dengan opasitas 0 */
-      }
-      to {
-        opacity: 1; /* Selesai dengan opasitas 1 */
-      }
     }
     </style>
     </head>
@@ -111,7 +100,6 @@ if(isset($_POST["signUp"]) ) {
     <option value="X">X</option>
     <option value="XI">XI</option>
     <option value="XII">XII</option>
-    <option value="XIII">XIII</option>
     </select>
   </div>
   

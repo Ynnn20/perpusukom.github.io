@@ -23,6 +23,57 @@ if(isset($_POST["search"]) ) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
      <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
      <title>Member terdaftar</title>
+     <style>
+      .table-responsive {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f8f9fa; /* Warna latar belakang header */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f3f4f6; /* Warna latar belakang baris ganjil */
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e2e8f0; /* Warna latar belakang saat dihover */
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Warna tombol hapus */
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Warna saat tombol hapus dihover */
+}
+     </style>
   </head>
   <body>
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
