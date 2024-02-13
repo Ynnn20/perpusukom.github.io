@@ -1,7 +1,7 @@
 # Sistem-Perpustakaan-Sekolah
 
 Fitur fitur yang terdapat didalam aplikasi ini : 
-1. Memiliki 2 akses login, admin dan user/siswa .
+1. Memiliki 3 akses login, admin, petugas dan user/siswa .
 2. Akses sebagai admin mendapatkan fasilitas berupa : 
   - insert, update dan delete data buku
   - mencari buku berdasarkan judul dan kategori
