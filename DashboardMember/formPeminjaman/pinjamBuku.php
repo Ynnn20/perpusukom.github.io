@@ -20,7 +20,7 @@ if(isset($_POST["pinjam"]) ) {
   if(pinjamBuku($_POST) > 0) {
     echo "<script>
     alert('Buku berhasil dipinjam');
-    document.location.href = '../buku/daftarBuku.php'
+    document.location.href = '../dashboardMember.php';
     </script>";
   }else {
     echo "<script>
@@ -50,12 +50,12 @@ if(isset($_POST["pinjam"]) ) {
   </style>
   <body>
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
-      <div class="container-fluid p-3">
+      <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">
           <img src="../../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
         </a>
         
-        <a class="btn btn-success" href="../dashboardMember.php">Dashboard</a>
+        <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
       </div>
     </nav>
     
@@ -176,10 +176,10 @@ if(isset($_POST["pinjam"]) ) {
             <span class="input-group-text" id="basic-addon1">Tanggal pinjam</span>
             <input type="date" name="tgl_peminjaman" id="tgl_peminjaman" class="form-control" placeholder="id buku" aria-label="tgl_peminjaman" aria-describedby="basic-addon1" onchange="setReturnDate()" required>
       </div>
-    <!--<div class="input-group mb-3 mt-3">
+    <div class="input-group mb-3 mt-3">
             <span class="input-group-text" id="basic-addon1">Tenggat Pengembalian</span>
             <input type="date" name="tgl_pengembalian" id="tgl_pengembalian" class="form-control" placeholder="tgl_pengembalian" aria-label="tgl_pengembalian" aria-describedby="basic-addon1" readonly>
-      </div>-->
+      </div>
       
     <a class="btn btn-danger" href="../buku/daftarBuku.php"> Batal</a>
     <button type="submit" class="btn btn-success" name="pinjam">Pinjam</button>

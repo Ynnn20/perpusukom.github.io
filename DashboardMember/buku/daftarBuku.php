@@ -44,13 +44,20 @@ $buku = queryReadData("SELECT * FROM buku WHERE kategori = 'sains'");
      <title>Daftar Buku || Member</title>
   </head>
   <style>
-    body {
-            background-image: url('../../assets/download.jfif'); /* Replace with the path to your background image */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: white; /* Set text color to contrast with the background */
-        }
+        body {
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      footer {
+        background: linear-gradient(to bottom, #198754, #198754);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
 
         .navbar,
         .footer,
@@ -64,15 +71,15 @@ $buku = queryReadData("SELECT * FROM buku WHERE kategori = 'sains'");
             justify-content: center;
             gap: 1.5rem;
         }
-  </style>
+    </style>
   <body>
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
-      <div class="container-fluid p-">
+      <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
+          <img src="../../assets/bukulogo-removebg-preview.png"" alt="logo" width="120px">
         </a>
         
-        <a class="btn btn-success" href="../dashboardMember.php">Dashboard</a>
+        <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
       </div>
     </nav>
     
@@ -93,7 +100,7 @@ $buku = queryReadData("SELECT * FROM buku WHERE kategori = 'sains'");
        
        <form action="" method="post" class="mt-5">
        <div class="input-group d-flex justify-content-end mb-3">
-         <input class="border p-2 rounded rounded-end-0 bg-tertiary" type="text" name="keyword" id="keyword" placeholder="Cari Buku">
+         <input class="border p-2 rounded rounded-end-0 bg-tertiary" type="text" name="keyword" id="keyword" placeholder="cari judul atau kategori buku...">
          <button class="border border-start-0 bg-light rounded rounded-start-0" type="submit" name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
        </div>
       </form>

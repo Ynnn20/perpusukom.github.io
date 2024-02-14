@@ -19,7 +19,7 @@ WHERE pengembalian.denda > 0");
   </head>
   <body>
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
-      <div class="container-fluid p-3">
+      <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">
           <img src="../../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
         </a>

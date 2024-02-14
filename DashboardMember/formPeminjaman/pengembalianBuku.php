@@ -19,6 +19,7 @@ if(isset($_POST["kembalikan"]) ) {
   if(pengembalian($_POST) > 0) {
     echo "<script>
     alert('Terimakasih telah mengembalikan buku!');
+    document.location.href = 'TransaksiPeminjaman.php';
     </script>";
   }else 
     echo "<script>
@@ -39,12 +40,12 @@ if(isset($_POST["kembalikan"]) ) {
   </head>
   <body>
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
-      <div class="container-fluid p-3">
+      <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
+          <img src="../../assets/bukulogo-removebg-preview.png"" alt="logo" width="120px">
         </a>
         
-        <a class="btn btn-success" href="../dashboardMember.php">Dashboard</a>
+        <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
       </div>
     </nav>
     

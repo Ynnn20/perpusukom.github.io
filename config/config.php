@@ -43,27 +43,6 @@ function tambahBuku($dataBuku) {
   
 }       
 
-// Menambahkan data petugas 
-// Menambahkan data petugas 
-function tambahPetugas($dataPetugas) {
-  global $connection;
-  
-  $namaPetugas = htmlspecialchars($dataPetugas["nama_petugas"]);
-  $passwordPetugas = $dataPetugas["password"];
-
-  $queryInsertDataPetugas = "INSERT INTO petugas (nama_petugas, password) VALUES (?, ?)";
-  
-  $stmt = mysqli_prepare($connection, $queryInsertDataPetugas);
-  mysqli_stmt_bind_param($stmt, "ss", $namaPetugas, $passwordPetugas);
-  mysqli_stmt_execute($stmt);
-  
-  $affected_rows = mysqli_stmt_affected_rows($stmt);
-
-  mysqli_stmt_close($stmt);
-
-  return $affected_rows;
-}
-
 // Function upload gambar 
 function upload() {
   $namaFile = $_FILES["cover"]["name"];
@@ -213,6 +192,17 @@ function deleteMember($nisnMember) {
   return mysqli_affected_rows($connection);
 }
 
+// Hapus history pengembalian data BUKU
+function deleteDataPengembalian($idPengembalian) {
+  global $connection;
+  
+  $deleteDataPengembalianBuku = "DELETE FROM pengembalian WHERE id_pengembalian = $idPengembalian";
+  mysqli_query($connection, $deleteDataPengembalianBuku);
+  return mysqli_affected_rows($connection);
+}
+
+
+// === FUNCTION KHUSUS ADMIN END ===
 // Hapus Petugas
 function deletePetugas($idPetugas) {
   global $connection;
@@ -228,18 +218,26 @@ nama_petugas LIKE '%$keyword%'
 ";
 return queryReadData($searchMember);
 }
-// Hapus history pengembalian data BUKU
-function deleteDataPengembalian($idPengembalian) {
+// Menambahkan data petugas 
+// Menambahkan data petugas 
+function tambahPetugas($dataPetugas) {
   global $connection;
   
-  $deleteDataPengembalianBuku = "DELETE FROM pengembalian WHERE id_pengembalian = $idPengembalian";
-  mysqli_query($connection, $deleteDataPengembalianBuku);
-  return mysqli_affected_rows($connection);
+  $namaPetugas = htmlspecialchars($dataPetugas["nama_petugas"]);
+  $passwordPetugas = $dataPetugas["password"];
+
+  $queryInsertDataPetugas = "INSERT INTO petugas (nama_petugas, password) VALUES (?, ?)";
+  
+  $stmt = mysqli_prepare($connection, $queryInsertDataPetugas);
+  mysqli_stmt_bind_param($stmt, "ss", $namaPetugas, $passwordPetugas);
+  mysqli_stmt_execute($stmt);
+  
+  $affected_rows = mysqli_stmt_affected_rows($stmt);
+
+  mysqli_stmt_close($stmt);
+
+  return $affected_rows;
 }
-
-
-// === FUNCTION KHUSUS ADMIN END ===
-
 
 // === FUNCTION KHUSUS MEMBER START ===
 // Peminjaman BUKU

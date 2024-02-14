@@ -15,8 +15,9 @@ if(!isset($_SESSION["signIn"]) ) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
      <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
      <title>Member Dashboard</title>
-     <style>
-    body {
+</head>
+<style>
+      body {
         background: linear-gradient(to bottom, #198754, #198754);
         background-repeat: no-repeat;
         background-size: cover;
@@ -66,15 +67,7 @@ if(!isset($_SESSION["signIn"]) ) {
         padding: 10px 0;
         box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
       }
-  </style>
-</head>
-<style>
-  @media screen and(max-width: 600px) {
-    .d-flex flex-wrap gap-2 cardImg a img {
-      width: 200px;
-    }
-  }
-</style>
+    </style>
   <body>
      <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
       <div class="container-fluid p-0">
@@ -118,8 +111,8 @@ if(!isset($_SESSION["signIn"]) ) {
       $year = date('Y');
       ?>
       
-      <h1 class="mt-5 fw-bold" >Dashboard - <span class="fs-4"> <?php echo $day. " ". $dayOfMonth." ". " ". $month. " ". $year; ?> </span></h1>
-      <div class="alert alert-success" role="alert">Selamat datang Siswa - <span class="text-capitalize fw-bold"><?php echo $_SESSION['member']['nama']; ?> </span> di Dashboard Perpus</div>
+      <h1 class="mt-5 fw-bold">Dashboard - <span class="fs-4 text-secondary"> <?php echo $day. " ". $dayOfMonth." ". " ". $month. " ". $year; ?> </span></h1>
+      <div class="alert alert-success" role="alert">Selamat datang member - <span class="text-capitalize fw-bold"><?php echo $_SESSION['member']['nama']; ?> </span> di Dashboard CuyPerpus</div>
       
     <div class="mt-3 p-3">
       <div class="mt-2 mb-4">
@@ -152,13 +145,12 @@ if(!isset($_SESSION["signIn"]) ) {
     </div>
   </div> 
       
-  <footer class="shadow-lg bg-white p-3">
-  <div class="container-fluid d-flex justify-content-between">
-    <p class="mt-2">Created by <span class="text-primary"> Hasyim Syahputra</span></p>
-    <p class="mt-2">versi 1.0</p>
-  </div>
-</footer>
-
+  <footer class="shadow-lg bg-subtle p-3">
+      <div class="container-fluid d-flex justify-content-between">
+      <p class="mt-2">Created by <span class="text-primary"> Hasyim Syahputra</span></p>
+      <p class="mt-2">versi 1.0</p>
+      </div>
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
