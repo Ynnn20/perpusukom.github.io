@@ -28,48 +28,50 @@ WHERE pengembalian.nisn = $nisnSiswa && pengembalian.denda > 0");
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
       <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/bukulogo-removebg-preview.png"" alt="logo" width="120px">
+          <img src="../../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
         </a>
         
-        <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
+        <a class="btn btn-success" href="../dashboardMember.php">Dashboard</a>
       </div>
     </nav>
   <div class="p-4 mt-5">
     <div class="mt-5 alert alert-primary" role="alert">Riwayat transaksi Denda Anda - <span class="fw-bold text-capitalize"><?php echo htmlentities($_SESSION["member"]["nama"]); ?></span></div>
 
-  <div class="table-responsive mt-3">
-    <table class="table table-striped table-hover">
-      <thead class="text-center">
-      <tr>
-        <th class="bg-primary text-light">id buku</th>
-        <th class="bg-primary text-light">Judul buku</th>
-        <th class="bg-primary text-light">Nisn</th>
-        <th class="bg-primary text-light">Nama siswa</th>
-        <th class="bg-primary text-light">Nama admin</th>
-        <th class="bg-primary text-light">Hari pengembalian</th>
-        <th class="bg-primary text-light">Keterlambatan</th>
-        <th class="bg-primary text-light">Denda</th>
-        <th class="bg-primary text-light">Action</th>
-      </tr>
-      <thead class="text-center">
-        <?php foreach ($dataDenda as $item) : ?>
-      <tr>
-        <td><?= $item["id_buku"]; ?></td>
-        <td><?= $item["judul"]; ?></td>
-        <td><?= $item["nisn"]; ?></td>
-        <td><?= $item["nama"]; ?></td>
-        <td><?= $item["nama_admin"]; ?></td>
-        <td><?= $item["buku_kembali"]; ?></td>
-        <td><?= $item["keterlambatan"]; ?></td>
-        <td><?= $item["denda"]; ?></td>
-        <td>
-          <a class="btn btn-success" href="formBayarDenda.php?id=<?= $item["id_pengembalian"]; ?>">Bayar</a>
-        </td>
-      </tr>
-        <?php endforeach; ?>
+    <div class="table-responsive mt-3">
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr class="text-center">
+                <th class="bg-primary text-light">ID Buku</th>
+                <th class="bg-primary text-light">Judul buku</th>
+                <th class="bg-primary text-light">Nisn</th>
+                <th class="bg-primary text-light">Nama siswa</th>
+                <th class="bg-primary text-light">Nama admin</th>
+                <th class="bg-primary text-light">Hari pengembalian</th>
+                <th class="bg-primary text-light">Keterlambatan</th>
+                <th class="bg-primary text-light">Denda</th>
+                <th class="bg-primary text-light">Action</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <?php foreach ($dataDenda as $item) : ?>
+            <tr>
+                <td><?= $item["id_buku"]; ?></td>
+                <td><?= $item["judul"]; ?></td>
+                <td><?= $item["nisn"]; ?></td>
+                <td><?= $item["nama"]; ?></td>
+                <td><?= $item["nama_admin"]; ?></td>
+                <td><?= $item["buku_kembali"]; ?></td>
+                <td><?= $item["keterlambatan"]; ?></td>
+                <td><?= $item["denda"]; ?></td>
+                <td>
+                    <a class="btn btn-success" href="formBayarDenda.php?id=<?= $item["id_pengembalian"]; ?>">Bayar</a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
     </table>
-    </div>
-  </div>
+</div>
+
   
   <footer class="fixed-bottom shadow-lg bg-subtle p-3">
       <div class="container-fluid d-flex justify-content-between">

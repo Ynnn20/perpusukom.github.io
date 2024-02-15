@@ -28,10 +28,10 @@ WHERE peminjaman.nisn = $akunMember");
      <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
       <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/bukulogo-removebg-preview.png"" alt="logo" width="120px">
+          <img src="../../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
         </a>
         
-        <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
+        <a class="btn btn-success" href="../dashboardMember.php">Dashboard</a>
       </div>
     </nav>
     
@@ -39,10 +39,10 @@ WHERE peminjaman.nisn = $akunMember");
     <div class="mt-5 alert alert-primary" role="alert">Riwayat transaksi Peminjaman Buku Anda - <span class="fw-bold text-capitalize"><?php echo htmlentities($_SESSION["member"]["nama"]); ?></span></div>
     
   <div class="table-responsive mt-3">
-    <table class="table table-striped table-hover">
-     <thead class="text-center">
-      <tr>
-        <th class="bg-primary text-light">No Peminjaman</th>
+    <table class="table table-striped table-hover table-bordered">
+     <thead>
+      <tr class="text-center">
+        <th class="bg-primary text-light">No</th>
         <th class="bg-primary text-light">ID Buku</th>
         <th class="bg-primary text-light">Judul Buku</th>
         <th class="bg-primary text-light">Nisn</th>
@@ -54,8 +54,9 @@ WHERE peminjaman.nisn = $akunMember");
       </tr>
       </thead>
       
-      <tr>
+      <tbody class="text-center">
       <?php foreach ($dataPinjam as $item) : ?>
+      <tr>
         <td><?= $item["id_peminjaman"]; ?></td>
         <td><?= $item["id_buku"]; ?></td>
         <td><?= $item["judul"]; ?></td>
@@ -67,8 +68,9 @@ WHERE peminjaman.nisn = $akunMember");
         <td>
           <a class="btn btn-success" href="pengembalianBuku.php?id=<?= $item["id_peminjaman"]; ?>"> Kembalikan</a>
         </td>
-      <?php endforeach; ?>
       </tr>
+      <?php endforeach; ?>
+      </tbody>
     </table>
     </div>
   </div>

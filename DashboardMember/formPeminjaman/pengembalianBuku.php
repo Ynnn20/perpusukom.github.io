@@ -45,7 +45,7 @@ if(isset($_POST["kembalikan"]) ) {
           <img src="../../assets/bukulogo-removebg-preview.png"" alt="logo" width="120px">
         </a>
         
-        <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
+        <a class="btn btn-success" href="../dashboardMember.php">Dashboard</a>
       </div>
     </nav>
     

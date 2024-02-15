@@ -35,7 +35,7 @@ if(isset($_POST["search"]) ) {
           <img src="../../assets/bukulogo-removebg-preview.png"" alt="logo" width="120px">
         </a>
         
-        <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
+        <a class="btn btn-success" href="../dashboardMember.php">Dashboard</a>
       </div>
     </nav>
     
@@ -50,10 +50,10 @@ if(isset($_POST["search"]) ) {
       </form> -->
       
     <div class="table-responsive mt-3">
-    <table class="table table-striped table-hover">
-      <thead class="text-center">
-      <tr>
-        <th class="bg-primary text-light">Id Pengembalian</th>
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+      <tr class="text-center">
+        <th class="bg-primary text-light">No</th>
         <th class="bg-primary text-light">Id Buku</th>
         <th class="bg-primary text-light">Judul Buku</th>
         <th class="bg-primary text-light">Kategori</th>
@@ -65,8 +65,9 @@ if(isset($_POST["search"]) ) {
         <th class="bg-primary text-light">Denda</th>
       </tr>
       </thead>
-        <?php foreach ($dataPengembalian as $item) : ?>
+      <tbody class="text-center">
       <tr>
+        <?php foreach ($dataPengembalian as $item) : ?>
         <td><?= $item["id_pengembalian"]; ?></td>
         <td><?= $item["id_buku"]; ?></td>
         <td><?= $item["judul"]; ?></td>
@@ -77,8 +78,9 @@ if(isset($_POST["search"]) ) {
         <td><?= $item["buku_kembali"]; ?></td>
         <td><?= $item["keterlambatan"]; ?></td>
         <td><?= $item["denda"]; ?></td>
-      </tr>
         <?php endforeach; ?>
+      </tr>
+      </tbody>
     </table>
     </div>
     </div>
