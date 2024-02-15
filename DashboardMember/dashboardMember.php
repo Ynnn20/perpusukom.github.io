@@ -111,7 +111,7 @@ if(!isset($_SESSION["signIn"]) ) {
       $year = date('Y');
       ?>
       
-      <h1 class="mt-5 fw-bold">Dashboard - <span class="fs-4 text-secondary"> <?php echo $day. " ". $dayOfMonth." ". " ". $month. " ". $year; ?> </span></h1>
+      <h1 class="mt-5 fw-bold">Dashboard - <span class="fs-4 text-bold"> <?php echo $day. " ". $dayOfMonth." ". " ". $month. " ". $year; ?> </span></h1>
       <div class="alert alert-success" role="alert">Selamat datang member - <span class="text-capitalize fw-bold"><?php echo $_SESSION['member']['nama']; ?> </span> di Dashboard CuyPerpus</div>
       
     <div class="mt-3 p-3">

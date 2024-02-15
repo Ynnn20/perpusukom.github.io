@@ -42,7 +42,7 @@ if(isset($_POST["signIn"]) ) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
-    <title>Sign In || Member</title>
+    <title>Sign In || Siswa</title>
     <style>
         body {
             background: linear-gradient(to right, #198754, #198754);
@@ -86,7 +86,7 @@ if(isset($_POST["signIn"]) ) {
         <div class="position-absolute top-0 start-50 translate-middle">
             <img src="../../assets/memberLogo.png" alt="adminLogo" width="85px">
         </div>
-        <h1 class="pt-5 text-center fw-bold">Sign In</h1>
+        <h1 class="pt-5 text-center fw-bold">Sign In - Siswa</h1>
         <hr>
         <form action="" method="post" class="row g-3 p-4 needs-validation" novalidate>
             <label for="validationCustom01" class="form-label">Nama Lengkap</label>

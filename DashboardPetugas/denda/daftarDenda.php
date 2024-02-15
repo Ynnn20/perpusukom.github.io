@@ -32,9 +32,9 @@ WHERE pengembalian.denda > 0");
       <div class="mt-5">
         <caption>List of denda</caption>
           <div class="table-responsive mt-3">
-    <table class="table table-striped table-hover">
-      <thead class="text-center">
-      <tr>
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+      <tr class="text-center">
         <th class="bg-primary text-light">id buku</th>
         <th class="bg-primary text-light">Judul buku</th>
         <th class="bg-primary text-light">Nisn</th>
@@ -46,6 +46,7 @@ WHERE pengembalian.denda > 0");
         <th class="bg-primary text-light">Denda</th>
       </tr>
       </thead>
+      <tbody class="text-center">
         <?php foreach ($dataDenda as $item) : ?>
       <tr>
         <td><?= $item["id_buku"]; ?></td>
@@ -59,6 +60,7 @@ WHERE pengembalian.denda > 0");
         <td><?= $item["denda"]; ?></td>
       </tr>
         <?php endforeach; ?>
+      </tbody>
     </table>
     </div>
    </div>

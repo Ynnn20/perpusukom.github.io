@@ -5,6 +5,6 @@ $_SESSION = [];
 session_unset();
 session_destroy();
 
-header("Location: ../sign/member/sign_in.php");
+header("Location: ../index.php");
   exit;
 ?>

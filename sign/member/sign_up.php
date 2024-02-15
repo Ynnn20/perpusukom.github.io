@@ -5,9 +5,8 @@ if(isset($_POST["signUp"]) ) {
   if(signUp($_POST) > 0) {
     echo "<script>
     alert('Sign Up berhasil!')
+    document.location.href = 'sign_in.php';
     </script>";
-    header("Location: sign_in.php");
-    exit();
   }else {
     echo "<script>
     alert('Sign Up gagal!')

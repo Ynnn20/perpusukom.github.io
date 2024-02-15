@@ -50,6 +50,7 @@ INNER JOIN buku ON peminjaman.id_buku = buku.id_buku");
             <a class="navbar-brand" href="#">
                 <img src="../../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
             </a>
+            <h3 style="color: black;">Daftar Peminjaman</h3>
             <a class="btn btn-success" href="../dashboardAdmin.php">Dashboard</a>
         </div>
     </nav>

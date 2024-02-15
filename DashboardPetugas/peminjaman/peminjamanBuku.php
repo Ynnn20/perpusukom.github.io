@@ -33,9 +33,9 @@ INNER JOIN buku ON peminjaman.id_buku = buku.id_buku");
     <div class="mt-5">
     <caption>List of Peminjaman</caption>
       <div class="table-responsive mt-3">
-        <table class="table table-striped table-hover">
-        <thead class="text-center">
-          <tr>
+        <table class="table table-striped table-hover table-bordered">
+        <thead>
+          <tr class="text-center">
             <th class="bg-primary text-light">Id Peminjaman</th>
             <th class="bg-primary text-light">Id Buku</th>
             <th class="bg-primary text-light">Judul Buku</th>
@@ -47,8 +47,9 @@ INNER JOIN buku ON peminjaman.id_buku = buku.id_buku");
             <th class="bg-primary text-light">Tanggal Peminjaman</th>
           </tr>
         </thead>
-       <?php foreach ($dataPeminjam as $item) : ?>
-      <tr>
+        <tbody class="text-center">
+          <?php foreach ($dataPeminjam as $item) : ?>
+        <tr>
        <td><?= $item["id_peminjaman"]; ?></td>
       <td><?= $item["id_buku"]; ?></td>
       <td><?= $item["judul"]; ?></td>
@@ -58,8 +59,9 @@ INNER JOIN buku ON peminjaman.id_buku = buku.id_buku");
       <td><?= $item["jurusan"]; ?></td>
       <td><?= $item["id_admin"]; ?></td>
       <td><?= $item["tgl_peminjaman"]; ?></td>
-      </tr>
-      <?php endforeach;?>
+    </tr>
+    <?php endforeach;?>
+        </tbody>
     </table>
     </div>
     </div>

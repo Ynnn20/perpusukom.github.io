@@ -81,7 +81,7 @@ if(isset($_POST["search"]) ) {
         <a class="navbar-brand" href="#">
           <img src="../../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
         </a>
-        
+        <h3 style="color: black;">Daftar Member</h3>
         <a class="btn btn-success" href="../dashboardAdmin.php">Dashboard</a>
       </div>
     </nav>

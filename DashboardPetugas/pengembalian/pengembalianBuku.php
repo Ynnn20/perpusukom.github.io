@@ -33,9 +33,9 @@ INNER JOIN admin ON pengembalian.id_admin = admin.id")
       <div class="mt-5">
     <caption>List of pengembalian</caption>
       <div class="table-responsive mt-3">
-    <table class="table table-striped table-hover">
-     <thead class="text-center">
-      <tr>
+    <table class="table table-striped table-hover table-bordered">
+     <thead>
+      <tr class="text-center">
         <th class="bg-primary text-light">Id Pengembalian</th>
         <th class="bg-primary text-light">Id Buku</th>
         <th class="bg-primary text-light">Judul Buku</th>
@@ -51,6 +51,7 @@ INNER JOIN admin ON pengembalian.id_admin = admin.id")
         <!--<th class="bg-primary text-light">Delete</th>-->
       </tr>
     </thead>
+    <tbody class="text-center">
         <?php foreach ($dataPeminjam as $item) : ?>
       <tr>
         <td><?= $item["id_pengembalian"]; ?></td>
@@ -72,6 +73,7 @@ INNER JOIN admin ON pengembalian.id_admin = admin.id")
           </td>-->
       </tr>
         <?php endforeach; ?>
+    </tbody>
     </table>
   </div>
  </div>

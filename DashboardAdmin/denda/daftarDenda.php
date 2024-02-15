@@ -23,16 +23,15 @@ WHERE pengembalian.denda > 0");
         <a class="navbar-brand" href="#">
           <img src="../../assets/bukulogo-removebg-preview.png" alt="logo" width="120px">
         </a>
-        
+        <h3 style="color: black;">Daftar Denda</h3>
         <a class="btn btn-success" href="../dashboardAdmin.php">Dashboard</a>
       </div>
     </nav>
     
-    <div class="p-4 mt-5">
-      <div class="mt-5">
+    <div class="container mt-5">
         <caption>List of denda</caption>
           <div class="table-responsive mt-3">
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover table-bordered">
       <thead class="text-center">
       <tr>
         <th class="bg-white text-dark">id buku</th>
@@ -60,7 +59,6 @@ WHERE pengembalian.denda > 0");
       </tr>
         <?php endforeach; ?>
     </table>
-    </div>
    </div>
   </div>
   
