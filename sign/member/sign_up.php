@@ -108,7 +108,7 @@ if(isset($_POST["signUp"]) ) {
     <option selected>Choose</option>
     <option value="Broadcasting">Broadcasting</option>
     <option value="Multimedia">Multimedia</option>
-    <option value="Teknin Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+    <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
     <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
     </select>
   </div>

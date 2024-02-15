@@ -64,14 +64,12 @@ if (isset($_POST["search"])) {
                 <thead>
                     <tr>
                         <th>Nama Petugas</th>
-                        <th>Password</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <?php foreach ($petugas as $item) : ?>
                     <tr>
                         <td><?= $item["nama_petugas"]; ?></td>
-                        <td><?= $item["password"]; ?></td>
                         <td>
                             <a href="deletePetugas.php?id=<?= $item["idPetugas"]; ?>" class="btn btn-danger"
                                 onclick="return confirm('Yakin ingin menghapus data petugas ?');"><i
